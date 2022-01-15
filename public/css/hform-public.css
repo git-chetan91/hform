@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 1s;
+    text-decoration: none;
+}
+
+html,
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 0.2em;
+    font-size: 0.98em;
+    /*min-height: 100%;*/
+}
+
+/* === Wrapper  ===*/
+.wrapper {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "nav-bar"
+        "hbox-form"
+
+}
+
+/* === Nav Bab  ===*/
+.nav-bar {
+    grid-area: nav-bar;
+    height: 70px;
+    box-shadow: 0 1px 6px rgba(57, 73, 76, 0.35);
+}
+
+.brand {
+    font-size: 2.3em;
+    text-transform: uppercase;
+    margin-left: 20px;
+    padding: 10px 10px;
+    line-height: 1.42857;
+    color: #222;
+}
+
+.box-wrapper {
+    height: auto;
+    position: relative;
+}
+
+
+/* === Contact form ===*/
+.hbox-form {
+    grid-area: box;
+    width: auto;
+    margin: 30px auto;
+    background-color: #FFF;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 13px rgb(44 66 60 / 19%);
+}
+
+.hbox-form h2 {
+    margin: 0 0 40px;
+    padding: 0;
+    color: #222;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.hbox-form input {
+    padding: 10px 0;
+    margin-bottom: 30px;
+    outline: none !important;
+}
+
+.hbox-form textarea {
+    height: 80px;
+    padding: 10px 0;
+    margin-bottom: 40px;
+    outline: none !important;
+}
+
+.hbox-form input,
+.hbox-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: none;
+    outline: none;
+    border: none !important;
+    border-bottom: 2px solid #999 !important;
+    font-size: 14px;
+}
+
+.hbox-form textarea {
+    margin-bottom: 20px;
+}
+
+.hbox-form button[type="submit"] {
+    font-size: 1.1em;
+    border-bottom: none !important;
+    cursor: pointer;
+    background: #00cf83 !important;
+    color: #FFF !important;
+    margin-bottom: 0;
+    border-radius: 30px;
+    text-transform: uppercase;
+    width: auto;
+    text-align: center;
+    padding: 5px 30px;
+}
+
+.hbox-form select {
+    border: none !important;
+    margin-top: 33px;
+    padding-left: 0;
+    width: 35%;
+    border-bottom: 2px solid #999 !important;
+}
+
+.hbox-form form div {
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.hbox-form form div input::placeholder {
+  opacity: 0.5;
+}
+
+.hbox-form form div label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: #999;
+    pointer-events: none;
+    transition: .5s;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hbox-form input:focus~label,
+.hbox-form textarea:focus~label,
+.hbox-form input:valid~label,
+.hbox-form textarea:valid~label {
+    top: -4px;
+    left: 0;
+    color: #37a000;
+}
+
+.hbox-form input:focus~label,
+.hbox-form textarea:focus~label,
+.hbox-form input:valid,
+.hbox-form textarea:valid {
+    border-bottom: 1px solid #37a000;
+}
+
+
+.group-radio {
+    display: flex;
+}
+
+.group-radio input[type="radio"] {
+    margin-top: 10px;
+    width: 90px !important;
+    position: relative;
+    max-height: 0 !important;
+    max-width: inherit;
+    border: 1px solid #000 !important;
+}
+.group-radio  input[type=radio]:after{
+    left: 4px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+}
+.radio {
+    display: flex;
+    margin-top: 46px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 13px rgb(44 66 60 / 19%);
+    margin-right: 15px;
+    padding: 10px;
+}
